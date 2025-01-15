@@ -1,7 +1,20 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <h1>JOBJAM Home Page</h1>
+  },
+  {
+    path: '/about',
+    element: <div> <h1>About page</h1> </div>
+  }
+])
+
 const App = () => {
   return (
     <>
-    <h1>JobJam App</h1>
+    <RouterProvider router={router} />
     </>
   )
 }
