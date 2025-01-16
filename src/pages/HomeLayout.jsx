@@ -4,7 +4,7 @@ const HomeLayout = () => {
   return (
     <>
     <div>
-      <nav>Navbar (layout component we share across children pages)</nav>
+      
       <Outlet />
     </div>
     </>
