@@ -1,7 +1,12 @@
+import { Outlet } from "react-router-dom"
+
 const HomeLayout = () => {
   return (
     <>
-    <h1> HOMELAYOUT </h1>
+    <div>
+      <nav>Navbar (layout component we share across children pages)</nav>
+      <Outlet />
+    </div>
     </>
   )
 }

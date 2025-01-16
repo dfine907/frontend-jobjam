@@ -1,30 +1,43 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { HomeLayout, Landing, Register, Login, DashboardLayout, Error } from './pages'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+  HomeLayout,
+  Landing,
+  Register,
+  Login,
+  DashboardLayout,
+  Error,
+} from './pages'
 
+// '/' is the parent route that we chose.  
 const router = createBrowserRouter([
   {
     path: '/',
-    element:  <HomeLayout />,
+    element: <HomeLayout />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardLayout />,
+      },
+    ],
   },
-  {
-    path: '/register',
-    element:  <Register />,
-  },
-  {
-    path: '/login',
-    element:  <Login />,
-  },
-  {
-    path: '/dashboard',
-    element:  <DashboardLayout />,
-  },
-  
 ])
 
 const App = () => {
   return (
     <>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   )
 }
