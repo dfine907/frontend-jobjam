@@ -22,7 +22,7 @@ const Register = () => {
             type="text"
             name="location"
             labelText="Location"
-            defaultValue="Earth 🌎"
+            defaultValue="Earth"
           />
           <FormRow
             type="email"
