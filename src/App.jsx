@@ -6,9 +6,14 @@ import {
   Login,
   DashboardLayout,
   Error,
+  AddJob,
+  Stats,
+  Profile,
+  Admin,
+  AllJobs,
 } from './pages'
 
-// '/' is the parent route that we chose.  
+// '/' is the parent route that we chose.
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +35,29 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <AddJob />,
+          },
+          {
+            path: 'all-jobs',
+            element: <AllJobs />,
+          },
+
+          {
+            path: 'profile',
+            element: <Profile />,
+          },
+          {
+            path: 'stats',
+            element: <Stats />,
+          },
+          {
+            path: 'admin',
+            element: <Admin />,
+          },
+        ],
       },
     ],
   },
