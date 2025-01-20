@@ -8,9 +8,9 @@ import {
   Error,
   AddJob,
   Stats,
+  AllJobs,
   Profile,
   Admin,
-  AllJobs,
 } from './pages'
 
 // '/' is the parent route that we chose.
@@ -41,6 +41,11 @@ const router = createBrowserRouter([
             element: <AddJob />,
           },
           {
+            path: 'stats',
+            element: <Stats />,
+          },
+
+          {
             path: 'all-jobs',
             element: <AllJobs />,
           },
@@ -49,10 +54,7 @@ const router = createBrowserRouter([
             path: 'profile',
             element: <Profile />,
           },
-          {
-            path: 'stats',
-            element: <Stats />,
-          },
+
           {
             path: 'admin',
             element: <Admin />,
