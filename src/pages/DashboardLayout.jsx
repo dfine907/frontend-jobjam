@@ -6,13 +6,14 @@ import { BigSidebar, Navbar, SmallSidebar } from '../components'
 const DashboardContext = createContext()
 
 const DashboardLayout = () => {
-  // temp
+  // temporary 
   const user = {
     name: 'John Doe',
   }
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+
 
   const toggleDarkTheme = () => {
     console.log('toggle Dark Theme')
@@ -43,7 +44,7 @@ const DashboardLayout = () => {
           <BigSidebar />
           <div>
             <Navbar />
-            <div>
+            <div className='dashboard-page'>
               <Outlet />
             </div>
           </div>
@@ -53,6 +54,7 @@ const DashboardLayout = () => {
   )
 }
 
+//custom hook I made.
 export const useDashboardContext = () => {
   return useContext(DashboardContext)
 }
