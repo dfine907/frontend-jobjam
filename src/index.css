@@ -329,3 +329,9 @@ button:disabled {
   background: #ffeeee;
   color: #d66a6a;
 }
+
+.jobjam {
+  color: #2cb1bc;
+  font-weight: bolder;
+  font-size:xx-large;
+}
