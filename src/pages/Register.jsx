@@ -10,19 +10,19 @@ const Register = () => {
           <Logo />
           <h4>Register</h4>
 
-          <FormRow type="text" name="name" defaultValue="john" />
+          <FormRow type="text" name="name" defaultValue="jack" />
 
           <FormRow
             type="text"
             lastName="lastName"
             labelText="last name"
-            defaultValue="smith"
+            defaultValue="sparrow"
           />
           <FormRow
             type="text"
             name="location"
             labelText="Location"
-            defaultValue="Earth"
+            defaultValue="USA"
           />
           <FormRow
             type="email"
